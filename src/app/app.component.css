@@ -7,3 +7,22 @@ h1, h2 {
     margin-left: 2rem;
     margin-right: 2rem;
 }
+
+.task {
+    border:.1rem solid rgb(173, 173, 173);
+    margin-bottom:.4rem;
+}
+
+.task-spacer {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.github-link {
+    margin-bottom: 2rem;
+    text-align: right;
+}
+
+img {
+    margin-top: -2rem;
+}

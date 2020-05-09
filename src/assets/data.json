@@ -1,24 +1,48 @@
 {
     "TASKS": [
         {
-            "HEADER": "Initialize your project, and create the Cupcake page",
-            "DETAILS": "DETAILS.\nSecond line of details.",
-            "USER_STORY": {
-                "AS_A": "As a user,",
-                "I_WANT": "I want to view the cupcake page",
-                "SO_THAT": "I can begin to play the game"
-            },
-            "GITHUB_COMMIT": "LINK"
+            "HEADER": "Initialize your project.",
+            "DETAILS": "Follow the linked guide to install angular, generate a project with routing, and get the application running.",
+            "HYPERLINK_TEXT": "Angular set-up",
+            "HYPERLINK": "https://angular.io/guide/setup-local",
+            "GITHUB_COMMIT": "8f018ecafeb91b3c625114c117535475280d40a5"
         },
         {
-            "HEADER": "Display your cupcake",
-            "DETAILS": "DETAILS.\nSecond line of details.",
+            "HEADER": "Create the cupcake page.",
+            "DETAILS": "Create a folder for components in the app folder, and generate a component for the cupcake page by using the CLI command inside the components folder.\nDisplay image of a cupcake.\nSetup router to land on the cupcake component by placing router-outlet in the app.component.html file.",
             "USER_STORY": {
                 "AS_A": "As a user,",
-                "I_WANT": "I want to see the cupcake on the cupcake page",
-                "SO_THAT": "I can see what to click on"
+                "I_WANT": "I want to view a cupcake on the cupcake page",
+                "SO_THAT": "So that I can have something to click on"
             },
-            "GITHUB_COMMIT": "LINK"
+            "HYPERLINK_TEXT": "Angular routing",
+            "HYPERLINK": "https://angular.io/guide/router",
+            "IMAGE": "../assets/cupcake.png",
+            "GITHUB_COMMIT": "d0f1d03bbfeafaf0da66b00d50fa8c04ef902f40"
+        },
+        {
+            "HEADER": "Create a counter and increment on cupcake click",
+            "DETAILS": "Create and test function for incrementing clicked count.\nDisplay count on page.\nConnect and test click of the cupcake to incrementing the count.",
+            "USER_STORY": {
+                "AS_A": "As a user,",
+                "I_WANT": "I want to be able to click on the cupcake and view my current score",
+                "SO_THAT": "So that I can see my score and my score can go up"
+            },
+            "HYPERLINK_TEXT": "Testing click events",
+            "HYPERLINK": "https://stackoverflow.com/questions/40093013/unit-testing-click-event-in-angular",
+            "GITHUB_COMMIT": "cb3002f2894623b974b43ffa3247ad9070fe45b2"
+        },
+        {
+            "HEADER": "Create a login page for users to log in.",
+            "DETAILS": "Generate Login page.\nCreate form for user name, a button to log in, and a button for creating a user.\nOn click buttons test and route to cupcake page.",
+            "USER_STORY": {
+                "AS_A": "As a user,",
+                "I_WANT": "I want to click on log in or create user",
+                "SO_THAT": "So that I can go to the cupcake clicking page"
+            },
+            "HYPERLINK_TEXT": "Angular Form Groups",
+            "HYPERLINK": "https://appdividend.com/2019/12/17/angular-formgroup-example-tutorial-from-scratch/",
+            "GITHUB_COMMIT": "8cabdf8c7dcc551095363cf7cd8f49aaceb79092"
         }
     ]
 }

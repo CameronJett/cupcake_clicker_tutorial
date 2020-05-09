@@ -2,14 +2,30 @@
 <h2>This is a step by step tutorial on creating a frontend and backend for a simple cupcake clicking game with users and
   a leaderboard</h2>
 
-<ul>
-  <div *ngFor="let task of json_data">
-    <p>{{ task.HEADER }}</p>
-    <p>{{ task.DETAILS }}</p>
-    <div class='user-story'>
-      <p>{{ task.USER_STORY.AS_A }}</p>
-      <p>{{ task.USER_STORY.I_WANT }}</p>
-      <p>{{ task.USER_STORY.SO_THAT }}</p>
+<ol>
+  <div class='task' *ngFor="let task of json_data">
+    <div class='task-spacer'>
+      <h1>{{ task.HEADER }}</h1>
+      <h3>{{ task.DETAILS }}</h3>
+
+      <div *ngIf="task.HYPERLINK">
+        <a href="{{task.HYPERLINK}}">{{ task.HYPERLINK_TEXT }}</a>
+      </div>
+
+      <div class='user-story' *ngIf="task.USER_STORY">
+        <p>{{ task.USER_STORY.AS_A }}</p>
+        <p>{{ task.USER_STORY.I_WANT }}</p>
+        <p>{{ task.USER_STORY.SO_THAT }}</p>
+      </div>
+
+      <div class='github-link'>
+        <a *ngIf="task.GITHUB_COMMIT"
+          href="https://github.com/CameronJett/cupcake-clicker-ui/commit/{{task.GITHUB_COMMIT}}">Github commit:
+          {{ task.GITHUB_COMMIT }}</a>
+      </div>
+      
+      <img *ngIf="task.IMAGE" src="{{task.IMAGE}}">
+
     </div>
   </div>
-</ul>
+</ol>
