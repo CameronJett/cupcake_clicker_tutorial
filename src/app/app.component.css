@@ -1,0 +1,9 @@
+h1, h2 {
+    text-align: center;
+}
+
+.user-story {
+    background-color: rgb(173, 173, 173);
+    margin-left: 2rem;
+    margin-right: 2rem;
+}

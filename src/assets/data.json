@@ -1,0 +1,24 @@
+{
+    "TASKS": [
+        {
+            "HEADER": "Initialize your project, and create the Cupcake page",
+            "DETAILS": "DETAILS.\nSecond line of details.",
+            "USER_STORY": {
+                "AS_A": "As a user,",
+                "I_WANT": "I want to view the cupcake page",
+                "SO_THAT": "I can begin to play the game"
+            },
+            "GITHUB_COMMIT": "LINK"
+        },
+        {
+            "HEADER": "Display your cupcake",
+            "DETAILS": "DETAILS.\nSecond line of details.",
+            "USER_STORY": {
+                "AS_A": "As a user,",
+                "I_WANT": "I want to see the cupcake on the cupcake page",
+                "SO_THAT": "I can see what to click on"
+            },
+            "GITHUB_COMMIT": "LINK"
+        }
+    ]
+}
