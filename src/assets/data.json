@@ -22,7 +22,7 @@
         },
         {
             "HEADER": "Create a counter and increment on cupcake click",
-            "DETAILS": "Create and test function for incrementing clicked count.\nDisplay count on page.\nConnect and test click of the cupcake to incrementing the count.",
+            "DETAILS": "Create function for incrementing clicked count.\nDisplay count on page.\nConnect click of the cupcake to incrementing the count.",
             "USER_STORY": {
                 "AS_A": "As a user,",
                 "I_WANT": "I want to be able to click on the cupcake and view my current score",
@@ -34,7 +34,7 @@
         },
         {
             "HEADER": "Create a login page for users to log in.",
-            "DETAILS": "Generate Login page.\nCreate form for user name, a button to log in, and a button for creating a user.\nOn click buttons test and route to cupcake page.",
+            "DETAILS": "Generate Login page.\nCreate form group for user name, a button to log in, and a button for creating a user.\nOn click buttons route to cupcake page.",
             "USER_STORY": {
                 "AS_A": "As a user,",
                 "I_WANT": "I want to click on log in or create user",
@@ -43,6 +43,47 @@
             "HYPERLINK_TEXT": "Angular Form Groups",
             "HYPERLINK": "https://appdividend.com/2019/12/17/angular-formgroup-example-tutorial-from-scratch/",
             "GITHUB_COMMIT": "8cabdf8c7dcc551095363cf7cd8f49aaceb79092"
+        },
+        {
+            "HEADER": "When clicking the login button make a GET call to the backend.",
+            "DETAILS": "Create a service for making http requests.\nWe will expecting a User object containing the username and click count to be returned for now.\nWrite a test to mock out the call to the backend, you'll need to spy on the http call and return a mock user object.\nCreate a function for making the get call.\nCall the function from the login page and route to the cupcake page after successful call.\nStarting from this point actually clicking the button will fail and not route anymore, but with the http tests we can infer that it will work once we have a backend up and running and returning the data we expect.\n**In my commit the test for calling the service function on the login component is incorrect, resolved in next commit.",
+            "USER_STORY": {
+                "AS_A": "As a user,",
+                "I_WANT": "I want to enter my user name and click on the log in button",
+                "SO_THAT": "So that I can get my data and go to the cupcake clicking page"
+            },
+            "HYPERLINK_TEXT": "HTTP service",
+            "HYPERLINK": "https://www.techiediaries.com/angular/angular-httpclient-9-8-service-api-calls-and-fetching-data/",
+            "GITHUB_COMMIT": "e4124919567ce850ef211488a5acfd88991c2144"
+        },
+        {
+            "HEADER": "When clicking the new user button make a POST call to the backend.",
+            "DETAILS": "Create a service function for making POST request.\nWe will expect a User containing the username and 0 click count to be returned.\nRepeat what was done in the last step for the most part not forgetting the tests in service and login page.\nCall the function from the login page and route to the cupcake page after successful call.\nI also made sure that the user name form had to not be empty to be valid.\n**Extra: I also set up the form buttons to be disabled when the user has not put in any characters into the username box for this commit.",
+            "USER_STORY": {
+                "AS_A": "As a user,",
+                "I_WANT": "I want to enter my user name and click on the new user button",
+                "SO_THAT": "So that I can create my user and go to the cupcake clicking page"
+            },
+            "GITHUB_COMMIT": "d3199d8d91b983e86ffaca7db8cd4ff200535ef3"
+        },
+        {
+            "HEADER": "Setup Spring backend.",
+            "DETAILS": "Go to start.spring.io and generate your Spring backend.\nAdd dependencies for Web, JPA, H2, and Lombok.\nRun the server and open localhost:8080, you should see a whitelabel error page because we have not set up a rest endpoint yet.",
+            "HYPERLINK_TEXT": "Spring guide",
+            "HYPERLINK": "https://spring.io/guides/tutorials/rest/",
+            "GITHUB_COMMIT": "9c313d6eed27149347a53b77b92eaacb255efe91"
+        },
+        {
+            "HEADER": "Create GET api endpoint.",
+            "DETAILS": "Create a Controller and Model folder.\nCreate a UserController with a RequestMapping for our /username endpoint.\nCreate a User model with our name and click count.\nReturn a simple mock user from the endpoint.\nNow when you run the backend you can go to the frontend, put in a name and click login, and you should route to the cupcake page.",
+            "USER_STORY": {
+                "AS_A": "As a user,",
+                "I_WANT": "I want to be able to put in my name and click login and be logged into the system",
+                "SO_THAT": "So that I can go to the cupcake clicking page"
+            },
+            "HYPERLINK_TEXT": "Http endpoint testing",
+            "HYPERLINK": "https://spring.io/guides/gs/testing-web/",
+            "GITHUB_COMMIT": "2c55d97d88403984bdd3f7c8dae55dfffe208abb"
         }
     ]
 }

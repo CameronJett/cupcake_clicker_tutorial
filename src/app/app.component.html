@@ -1,6 +1,7 @@
 <h1>CUPCAKE CLICKER TUTORIAL</h1>
 <h2>This is a step by step tutorial on creating a frontend and backend for a simple cupcake clicking game with users and
-  a leaderboard</h2>
+  a leaderboard.  Make sure to follow TDD for this project.  If you are having issues some steps are given angular references, and every step has a link to a Github 
+  commit for reference to show all changes on that step, but for best effect try and solve the issues on your own first..</h2>
 
 <ol>
   <div class='task' *ngFor="let task of json_data">
@@ -23,7 +24,7 @@
           href="https://github.com/CameronJett/cupcake-clicker-ui/commit/{{task.GITHUB_COMMIT}}">Github commit:
           {{ task.GITHUB_COMMIT }}</a>
       </div>
-      
+
       <img *ngIf="task.IMAGE" src="{{task.IMAGE}}">
 
     </div>
