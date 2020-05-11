@@ -78,12 +78,71 @@
             "DETAILS": "Create a Controller and Model folder.\nCreate a UserController with a RequestMapping for our /username endpoint.\nCreate a User model with our name and click count.\nReturn a simple mock user from the endpoint.\nNow when you run the backend you can go to the frontend, put in a name and click login, and you should route to the cupcake page.",
             "USER_STORY": {
                 "AS_A": "As a user,",
-                "I_WANT": "I want to be able to put in my name and click login and be logged into the system",
-                "SO_THAT": "So that I can go to the cupcake clicking page"
+                "I_WANT": "I want to be able to put in my name and click login",
+                "SO_THAT": "So that I can be logged in and I can go to the cupcake clicking page as my user"
             },
             "HYPERLINK_TEXT": "Http endpoint testing",
             "HYPERLINK": "https://spring.io/guides/gs/testing-web/",
             "GITHUB_COMMIT": "2c55d97d88403984bdd3f7c8dae55dfffe208abb"
+        },
+        {
+            "HEADER": "Create POST api endpoint.",
+            "DETAILS": "Create a POST endpoint on the Controller taking in our new User as the RequestBody.\nReturn a simple mock user from the endpoint.\nRun the backend and when you click on create user, and you should route to the cupcake page.",
+            "USER_STORY": {
+                "AS_A": "As a user,",
+                "I_WANT": "I want to be able to put in my name and click create a new user",
+                "SO_THAT": "So that I can go to the cupcake clicking page as a new user"
+            },
+            "GITHUB_COMMIT": "983c66e004fe6a6ef57fd1d13303992610046a63"
+        },
+        {
+            "HEADER": "Create a service to return our mock data.",
+            "DETAILS": "We will want to separate our Controller and our data logic, and we will do that by creating a User service.\nCreate two functions in our service for getting and creating.\nIn our controller tests mock out the service with return values so the tests are not dependent on each other.",
+            "HYPERLINK_TEXT": "Services",
+            "HYPERLINK": "https://www.tutorialspoint.com/spring_boot/spring_boot_service_components.htm",
+            "GITHUB_COMMIT": "69ced28dd9cf8edbef6a9afe426aa1efb79c5590"
+        },
+        {
+            "HEADER": "Create a frontend service for sharing our user data between pages.",
+            "DETAILS": "Back to the UI side, when we get our data on the login page and route to the cupcake page we will want to show that data if the user had saved clicks from the backend.\nCreate a User service on the frontend and functions to get our data.\nDisplay the count we have gotten from the backend on the cupcake page.",
+            "USER_STORY": {
+                "AS_A": "As a user,",
+                "I_WANT": "I want to be able to see my stored clicks on the cupcake page",
+                "SO_THAT": "So that I can continue to add to my click score"
+            },
+            "HYPERLINK_TEXT": "Managing Data",
+            "HYPERLINK": "https://angular.io/start/start-data",
+            "GITHUB_COMMIT": "14a8164997393ced1343abc2fd28bb5870dd7bd2"
+        },
+        {
+            "HEADER": "Create a save button, and save data endpoint.",
+            "DETAILS": "Create a button on the cupcake page.\nCreate a service call to the backend.\nCreate a Rest PUT endpoint for taking in the new user data.\nShow a notification that the save went through.\n**In my commit this is done as a POST, but I changed it to a PUT in the next commit.",
+            "USER_STORY": {
+                "AS_A": "As a user,",
+                "I_WANT": "I want to click the save button and see a notification",
+                "SO_THAT": "So that my click progress will be saved"
+            },
+            "GITHUB_COMMIT": "b66b561d2aa2e8cea9caf4f64c677064270d4cec",
+            "GITHUB_SECOND_COMMIT": "f100ee249b12089d29897c6277794e1286dac318"
+        },
+        {
+            "HEADER": "Create a delete button, and delete data endpoint.",
+            "DETAILS": "Create a button on the cupcake page.\nCreate a service call to the backend.\nCreate a Rest endpoint for deleting the current user.\nRoute back to the login page and show that the delete was successful.",
+            "USER_STORY": {
+                "AS_A": "As a user,",
+                "I_WANT": "I want to click the delete button and see a notification",
+                "SO_THAT": "So that my user data will be deleted"
+            },
+            "GITHUB_COMMIT": "4efa4fb0265f2ef736936c1b2096c20ef445c5c8",
+            "GITHUB_SECOND_COMMIT": "25d723cf6603b22f025cadcf026fbbc42c37206a"
+        },
+        {
+            "HEADER": "Create an H2 database set up to persist our user data and have the get endpoint return a user in the DB.",
+            "DETAILS": "Setup the H2 database and a few mock rows with a User table containing id, name and clicks.\nOpen the H2 console with the url and JDBC URL given in the spring output (Will be something like localhost:8080/h2_console, jdbc:h2:mem:testdb) and run select * on the USER table to see your base data there.\nRefactor the User to have an ID on the front and back end.\nCreate a UserRepository and update the getUserByName in our user service to return the user from the database.\nFor now return null if the user doesn't exist, we will deal with error handling later.",
+			"HYPERLINK_TEXT": "H2 Database Integration",
+			"HYPERLINK": "https://stackabuse.com/integrating-h2-database-with-spring-boot/",
+            "GITHUB_COMMIT": "7ec32852d57fb7312ddc3fe7bb3b64d45b96def5",
+            "GITHUB_SECOND_COMMIT": "f2f1fc56974bbc9f7ac1be39e0e12fc3304d834d"
         }
     ]
 }

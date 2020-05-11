@@ -23,6 +23,9 @@
         <a *ngIf="task.GITHUB_COMMIT"
           href="https://github.com/CameronJett/cupcake-clicker-ui/commit/{{task.GITHUB_COMMIT}}">Github commit:
           {{ task.GITHUB_COMMIT }}</a>
+          <a *ngIf="task.GITHUB_SECOND_COMMIT"
+            href="https://github.com/CameronJett/cupcake-clicker-ui/commit/{{task.GITHUB_COMMIT}}">Github commit:
+            {{ task.GITHUB_SECOND_COMMIT }}</a>
       </div>
 
       <img *ngIf="task.IMAGE" src="{{task.IMAGE}}">
