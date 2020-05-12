@@ -14,15 +14,18 @@
       </div>
 
       <div class='user-story' *ngIf="task.USER_STORY">
+        <div class='user-spacer'>
         <p>{{ task.USER_STORY.AS_A }}</p>
         <p>{{ task.USER_STORY.I_WANT }}</p>
         <p>{{ task.USER_STORY.SO_THAT }}</p>
+      </div>
       </div>
 
       <div class='github-link'>
         <a *ngIf="task.GITHUB_COMMIT"
           href="https://github.com/CameronJett/cupcake-clicker-ui/commit/{{task.GITHUB_COMMIT}}">Github commit:
           {{ task.GITHUB_COMMIT }}</a>
+          <br><br>
           <a *ngIf="task.GITHUB_SECOND_COMMIT"
             href="https://github.com/CameronJett/cupcake-clicker-ui/commit/{{task.GITHUB_COMMIT}}">Github commit:
             {{ task.GITHUB_SECOND_COMMIT }}</a>

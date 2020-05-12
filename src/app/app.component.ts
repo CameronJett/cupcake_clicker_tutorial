@@ -12,7 +12,6 @@ export class AppComponent {
 
   constructor() {
     this.json_data = data.TASKS;
-    console.log("Reading local json", this.json_data);
   }
 
   ngOnInit() {}

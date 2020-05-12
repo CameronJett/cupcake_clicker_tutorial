@@ -143,6 +143,25 @@
 			"HYPERLINK": "https://stackabuse.com/integrating-h2-database-with-spring-boot/",
             "GITHUB_COMMIT": "7ec32852d57fb7312ddc3fe7bb3b64d45b96def5",
             "GITHUB_SECOND_COMMIT": "f2f1fc56974bbc9f7ac1be39e0e12fc3304d834d"
+        },
+        {
+            "HEADER": "Implement our POST, PUT, and DELETE methods",
+            "DETAILS": "On POST create a new user in the DB.\nOn PUT update the given user's click count.\nOn DELETE delete the user from the DB.\n At this point all the CRUD operations are finished and we have a basic working App.",
+            "GITHUB_COMMIT": "10289f955a6730103b5debfa6bd1f9fdee775514"
+        },
+        {
+            "HEADER": "Create a leaderboard page.",
+			"DETAILS": "Create a new leaderboard page, a button on the cupcake page to route to it.\nCreate a GET request to get all users and clicks from the backend.\nUse an ngFor to list all users in descending point order.",
+			"USER_STORY": {
+				"AS_A": "As a user,",
+				"I_WANT": "I want to click on the leaderboard button and go to the leaderboard page,",
+				"SO_THAT": "So that I can see where my score ranks among everyone else."
+			},
+			"HYPERLINK_TEXT": "For loops in angular",
+			"HYPERLINK": "https://angular.io/api/common/NgForOf",
+			"IMAGE": "",
+            "GITHUB_COMMIT": "5726552954b0138ccd011769e15a3a8d220e589c",
+            "GITHUB_SECOND_COMMIT": "7a4b9fe9c88d506a735d5ab9f96adc5adcd90d6e"
         }
     ]
 }
