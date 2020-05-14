@@ -159,9 +159,15 @@
 			},
 			"HYPERLINK_TEXT": "For loops in angular",
 			"HYPERLINK": "https://angular.io/api/common/NgForOf",
-			"IMAGE": "",
             "GITHUB_COMMIT": "5726552954b0138ccd011769e15a3a8d220e589c",
             "GITHUB_SECOND_COMMIT": "7a4b9fe9c88d506a735d5ab9f96adc5adcd90d6e"
+        },
+        {
+            "HEADER": "Extra step: Add stylings.",
+			"DETAILS": "Add any CSS you want to make your page look better.\nTry installing angular materials and use mat-button for your buttons and mat-table on the leaderboard page.\nIn my commit I also added CSS animations to create an animation when the cupcake is clicked.",
+			"HYPERLINK_TEXT": "Angular Materials",
+			"HYPERLINK": "https://material.angular.io/",
+            "GITHUB_COMMIT": "04da5f7b792fd7b48427d749698e2215e32e918f"
         }
     ]
 }
