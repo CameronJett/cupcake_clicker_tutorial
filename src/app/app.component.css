@@ -1,11 +1,35 @@
+.body {
+    margin-left: 12%;
+    margin-right: 12%;
+}
+
 h1, h2 {
     text-align: center;
+    font-weight: 500;
+}
+
+mat-expansion-panel {
+    margin-left: 16%;
+    margin-right: 16%;
+    background-color: rgb(71, 75, 78);
+    color: rgb(236, 236, 236);
+}
+
+mat-panel-description {
+    color: rgb(236, 236, 236);
+    font-weight: bold;
+    justify-content: center !important;
+}
+
+mat-card {
+    background-color: lightgray;
 }
 
 .user-story {
-    background-color: rgb(173, 173, 173);
-    margin-left: 2rem;
-    margin-right: 2rem;
+    background-color: rgb(81, 85, 88);
+    color: rgb(236, 236, 236);
+    font-weight: 500;
+    margin-top: 1rem;
 }
 
 .task {
@@ -24,9 +48,20 @@ h1, h2 {
 }
 
 img {
-    margin-top: -2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.links:nth-child(n) {
+    margin-top: .5rem;
 }
 
 .user-spacer {
     margin: .5rem;
+}
+
+.mat-stroked-button {
+    border: 1px solid rgb(168, 168, 168);
+    background-color: rgb(230, 231, 221);
 }

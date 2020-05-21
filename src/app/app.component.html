@@ -1,38 +1,43 @@
-<h1>CUPCAKE CLICKER TUTORIAL</h1>
-<h2>This is a step by step tutorial on creating a frontend and backend for a simple cupcake clicking game with users and
-  a leaderboard.  Make sure to follow TDD for this project.  If you are having issues some steps are given angular references, and every step has a link to a Github 
-  commit for reference to show all changes on that step, but for best effect try and solve the issues on your own first..</h2>
+<div class="body">
+  <h1>CUPCAKE CLICKER TUTORIAL</h1>
+  <h2>This is a step by step tutorial on creating a frontend and backend for a simple cupcake clicking game with users
+    and a leaderboard.
+    <br>
+    Make sure to follow TDD for this project. If you are having issues some steps are given angular references.</h2>
 
-<ol>
-  <div class='task' *ngFor="let task of json_data">
-    <div class='task-spacer'>
-      <h1>{{ task.HEADER }}</h1>
-      <h3>{{ task.DETAILS }}</h3>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-description>
+        BEGINNING TIPS
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>Debugging: When having issues try right clicking and choosing inspect. Here you can see errors in the console, or
+      look into the network tab once you start making backend calls to see what data or errors are getting returned.</p>
+    <p>When adding new Modules, they will need to be added to the app.module.ts file, as well as your component and spec
+      files that use them.</p>
+  </mat-expansion-panel>
 
-      <div *ngIf="task.HYPERLINK">
-        <a href="{{task.HYPERLINK}}">{{ task.HYPERLINK_TEXT }}</a>
-      </div>
+  <ol>
+    <div class='task' *ngFor="let task of json_data">
+      <mat-card class="card">
+        <h1>{{ task.HEADER }}</h1>
+        <h3>{{ task.DETAILS }}</h3>
 
-      <div class='user-story' *ngIf="task.USER_STORY">
-        <div class='user-spacer'>
-        <p>{{ task.USER_STORY.AS_A }}</p>
-        <p>{{ task.USER_STORY.I_WANT }}</p>
-        <p>{{ task.USER_STORY.SO_THAT }}</p>
-      </div>
-      </div>
+        <div class="links" *ngFor="let link of task.LINKS">
+          <a mat-stroked-button href="{{link.HYPERLINK}}" target="_blank" color="primary">{{ link.HYPERLINK_TEXT }}</a>
+        </div>
 
-      <div class='github-link'>
-        <a *ngIf="task.GITHUB_COMMIT"
-          href="https://github.com/CameronJett/cupcake-clicker-ui/commit/{{task.GITHUB_COMMIT}}">Github commit:
-          {{ task.GITHUB_COMMIT }}</a>
-          <br><br>
-          <a *ngIf="task.GITHUB_SECOND_COMMIT"
-            href="https://github.com/CameronJett/cupcake-clicker-ui/commit/{{task.GITHUB_COMMIT}}">Github commit:
-            {{ task.GITHUB_SECOND_COMMIT }}</a>
-      </div>
+        <mat-card class="user-story" *ngIf="task.USER_STORY">
+          <div class='user-spacer'>
+            <p>{{ task.USER_STORY.AS_A }}</p>
+            <p>{{ task.USER_STORY.I_WANT }}</p>
+            <p>{{ task.USER_STORY.SO_THAT }}</p>
+          </div>
+        </mat-card>
 
-      <img *ngIf="task.IMAGE" src="{{task.IMAGE}}">
+        <img *ngIf="task.IMAGE" src="{{task.IMAGE}}">
 
+      </mat-card>
     </div>
-  </div>
-</ol>
+  </ol>
+</div>

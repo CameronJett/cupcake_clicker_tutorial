@@ -1,9 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-    background-color: #DCDCDC;
-    color: #454545;
+    background-color: rgb(245, 204, 180);
+    color: #333333;
     margin-left: 15%;
     margin-right: 15%;
     margin-top: 1rem;
     white-space: pre-wrap;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -3,45 +3,65 @@
         {
             "HEADER": "Initialize your project.",
             "DETAILS": "Follow the linked guide to install angular, generate a project with routing, and get the application running.",
-            "HYPERLINK_TEXT": "Angular set-up",
-            "HYPERLINK": "https://angular.io/guide/setup-local",
+            "LINKS": [
+                {
+                    "HYPERLINK_TEXT": "Angular set-up",
+                    "HYPERLINK": "https://angular.io/guide/setup-local"
+                }
+            ],
             "GITHUB_COMMIT": "8f018ecafeb91b3c625114c117535475280d40a5"
         },
         {
             "HEADER": "Create the cupcake page.",
-            "DETAILS": "Create a folder for components in the app folder, and generate a component for the cupcake page by using the CLI command inside the components folder.\nDisplay image of a cupcake.\nSetup router to land on the cupcake component by placing router-outlet in the app.component.html file.",
+            "DETAILS": "Create a components folder in the app folder, and generate a component for the cupcake page by using the CLI command inside the components folder.\nDisplay image of a cupcake.\nSetup router to land on the cupcake component by placing router-outlet in the app.component.html file.\nUsually we do not test whether something static is displayed correctly on the page so we will not write a test that the cupcake exists.",
             "USER_STORY": {
                 "AS_A": "As a user,",
                 "I_WANT": "I want to view a cupcake on the cupcake page",
                 "SO_THAT": "So that I can have something to click on"
             },
-            "HYPERLINK_TEXT": "Angular routing",
-            "HYPERLINK": "https://angular.io/guide/router",
+            "LINKS": [
+                {
+                    "HYPERLINK_TEXT": "Angular routing",
+                    "HYPERLINK": "https://angular.io/guide/router"
+                }
+            ],
             "IMAGE": "../assets/cupcake.png",
             "GITHUB_COMMIT": "d0f1d03bbfeafaf0da66b00d50fa8c04ef902f40"
         },
         {
             "HEADER": "Create a counter and increment on cupcake click",
-            "DETAILS": "Create function for incrementing clicked count.\nDisplay count on page.\nConnect click of the cupcake to incrementing the count.",
+            "DETAILS": "Create function for incrementing clicked count.\nDisplay count on page.\nConnect click of the cupcake to incrementing the count.\nWrite a test for this.",
             "USER_STORY": {
                 "AS_A": "As a user,",
                 "I_WANT": "I want to be able to click on the cupcake and view my current score",
                 "SO_THAT": "So that I can see my score and my score can go up"
             },
-            "HYPERLINK_TEXT": "Testing click events",
-            "HYPERLINK": "https://stackoverflow.com/questions/40093013/unit-testing-click-event-in-angular",
+            "LINKS": [
+                {
+                    "HYPERLINK_TEXT": "Angular Testing",
+                    "HYPERLINK": "https://angular.io/guide/testing"
+                },
+                {
+                    "HYPERLINK_TEXT": "Testing click events",
+                    "HYPERLINK": "https://stackoverflow.com/questions/40093013/unit-testing-click-event-in-angular"
+                }
+            ],
             "GITHUB_COMMIT": "cb3002f2894623b974b43ffa3247ad9070fe45b2"
         },
         {
             "HEADER": "Create a login page for users to log in.",
-            "DETAILS": "Generate Login page.\nCreate form group for user name, a button to log in, and a button for creating a user.\nOn click buttons route to cupcake page.",
+            "DETAILS": "Generate Login page.\nCreate form group for user name, a button to log in, and a button for creating a user.\nOn click buttons route to cupcake page.\nWhen working with the test file remember that if your template is dependent on another module, you will need to add that module to the test file as well, for instance here you will need to add 'ReactiveFormsModule', 'RouterTestingModule', and 'FormsModule' to the Testbed imports list.",
             "USER_STORY": {
                 "AS_A": "As a user,",
                 "I_WANT": "I want to click on log in or create user",
                 "SO_THAT": "So that I can go to the cupcake clicking page"
             },
-            "HYPERLINK_TEXT": "Angular Form Groups",
-            "HYPERLINK": "https://appdividend.com/2019/12/17/angular-formgroup-example-tutorial-from-scratch/",
+            "LINKS": [
+                {
+                    "HYPERLINK_TEXT": "Angular Form Groups",
+                    "HYPERLINK": "https://appdividend.com/2019/12/17/angular-formgroup-example-tutorial-from-scratch/"
+                }
+            ],
             "GITHUB_COMMIT": "8cabdf8c7dcc551095363cf7cd8f49aaceb79092"
         },
         {
@@ -52,8 +72,12 @@
                 "I_WANT": "I want to enter my user name and click on the log in button",
                 "SO_THAT": "So that I can get my data and go to the cupcake clicking page"
             },
-            "HYPERLINK_TEXT": "HTTP service",
-            "HYPERLINK": "https://www.techiediaries.com/angular/angular-httpclient-9-8-service-api-calls-and-fetching-data/",
+            "LINKS": [
+                {
+                    "HYPERLINK_TEXT": "HTTP service",
+                    "HYPERLINK": "https://www.techiediaries.com/angular/angular-httpclient-9-8-service-api-calls-and-fetching-data/"
+                }
+            ],
             "GITHUB_COMMIT": "e4124919567ce850ef211488a5acfd88991c2144"
         },
         {
@@ -69,8 +93,12 @@
         {
             "HEADER": "Setup Spring backend.",
             "DETAILS": "Go to start.spring.io and generate your Spring backend.\nAdd dependencies for Web, JPA, H2, and Lombok.\nRun the server and open localhost:8080, you should see a whitelabel error page because we have not set up a rest endpoint yet.",
-            "HYPERLINK_TEXT": "Spring guide",
-            "HYPERLINK": "https://spring.io/guides/tutorials/rest/",
+            "LINKS": [
+                {
+                    "HYPERLINK_TEXT": "Spring guide",
+                    "HYPERLINK": "https://spring.io/guides/tutorials/rest/"
+                }
+            ],
             "GITHUB_COMMIT": "9c313d6eed27149347a53b77b92eaacb255efe91"
         },
         {
@@ -81,8 +109,12 @@
                 "I_WANT": "I want to be able to put in my name and click login",
                 "SO_THAT": "So that I can be logged in and I can go to the cupcake clicking page as my user"
             },
-            "HYPERLINK_TEXT": "Http endpoint testing",
-            "HYPERLINK": "https://spring.io/guides/gs/testing-web/",
+            "LINKS": [
+                {
+                    "HYPERLINK_TEXT": "Http endpoint testing",
+                    "HYPERLINK": "https://spring.io/guides/gs/testing-web/"
+                }
+            ],
             "GITHUB_COMMIT": "2c55d97d88403984bdd3f7c8dae55dfffe208abb"
         },
         {
@@ -98,8 +130,12 @@
         {
             "HEADER": "Create a service to return our mock data.",
             "DETAILS": "We will want to separate our Controller and our data logic, and we will do that by creating a User service.\nCreate two functions in our service for getting and creating.\nIn our controller tests mock out the service with return values so the tests are not dependent on each other.",
-            "HYPERLINK_TEXT": "Services",
-            "HYPERLINK": "https://www.tutorialspoint.com/spring_boot/spring_boot_service_components.htm",
+            "LINKS": [
+                {
+                    "HYPERLINK_TEXT": "Services",
+                    "HYPERLINK": "https://www.tutorialspoint.com/spring_boot/spring_boot_service_components.htm"
+                }
+            ],
             "GITHUB_COMMIT": "69ced28dd9cf8edbef6a9afe426aa1efb79c5590"
         },
         {
@@ -110,8 +146,12 @@
                 "I_WANT": "I want to be able to see my stored clicks on the cupcake page",
                 "SO_THAT": "So that I can continue to add to my click score"
             },
-            "HYPERLINK_TEXT": "Managing Data",
-            "HYPERLINK": "https://angular.io/start/start-data",
+            "LINKS": [
+                {
+                    "HYPERLINK_TEXT": "Managing Data",
+                    "HYPERLINK": "https://angular.io/start/start-data"
+                }
+            ],
             "GITHUB_COMMIT": "14a8164997393ced1343abc2fd28bb5870dd7bd2"
         },
         {
@@ -139,8 +179,12 @@
         {
             "HEADER": "Create an H2 database set up to persist our user data and have the get endpoint return a user in the DB.",
             "DETAILS": "Setup the H2 database and a few mock rows with a User table containing id, name and clicks.\nOpen the H2 console with the url and JDBC URL given in the spring output (Will be something like localhost:8080/h2_console, jdbc:h2:mem:testdb) and run select * on the USER table to see your base data there.\nRefactor the User to have an ID on the front and back end.\nCreate a UserRepository and update the getUserByName in our user service to return the user from the database.\nFor now return null if the user doesn't exist, we will deal with error handling later.",
-			"HYPERLINK_TEXT": "H2 Database Integration",
-			"HYPERLINK": "https://stackabuse.com/integrating-h2-database-with-spring-boot/",
+            "LINKS": [
+                {
+                    "HYPERLINK_TEXT": "H2 Database Integration",
+                    "HYPERLINK": "https://stackabuse.com/integrating-h2-database-with-spring-boot/"
+                }
+            ],
             "GITHUB_COMMIT": "7ec32852d57fb7312ddc3fe7bb3b64d45b96def5",
             "GITHUB_SECOND_COMMIT": "f2f1fc56974bbc9f7ac1be39e0e12fc3304d834d"
         },
@@ -151,22 +195,30 @@
         },
         {
             "HEADER": "Create a leaderboard page.",
-			"DETAILS": "Create a new leaderboard page, a button on the cupcake page to route to it.\nCreate a GET request to get all users and clicks from the backend.\nUse an ngFor to list all users in descending point order.",
-			"USER_STORY": {
-				"AS_A": "As a user,",
-				"I_WANT": "I want to click on the leaderboard button and go to the leaderboard page,",
-				"SO_THAT": "So that I can see where my score ranks among everyone else."
-			},
-			"HYPERLINK_TEXT": "For loops in angular",
-			"HYPERLINK": "https://angular.io/api/common/NgForOf",
+            "DETAILS": "Create a new leaderboard page, a button on the cupcake page to route to it.\nCreate a GET request to get all users and clicks from the backend.\nUse an ngFor to list all users in descending point order.",
+            "USER_STORY": {
+                "AS_A": "As a user,",
+                "I_WANT": "I want to click on the leaderboard button and go to the leaderboard page,",
+                "SO_THAT": "So that I can see where my score ranks among everyone else."
+            },
+            "LINKS": [
+                {
+                    "HYPERLINK_TEXT": "For loops in angular",
+                    "HYPERLINK": "https://angular.io/api/common/NgForOf"
+                }
+            ],
             "GITHUB_COMMIT": "5726552954b0138ccd011769e15a3a8d220e589c",
             "GITHUB_SECOND_COMMIT": "7a4b9fe9c88d506a735d5ab9f96adc5adcd90d6e"
         },
         {
             "HEADER": "Extra step: Add stylings.",
-			"DETAILS": "Add any CSS you want to make your page look better.\nTry installing angular materials and use mat-button for your buttons and mat-table on the leaderboard page.\nIn my commit I also added CSS animations to create an animation when the cupcake is clicked.",
-			"HYPERLINK_TEXT": "Angular Materials",
-			"HYPERLINK": "https://material.angular.io/",
+            "DETAILS": "Add any CSS you want to make your page look better.\nTry installing angular materials and use mat-button for your buttons and mat-table on the leaderboard page.\nIn my commit I also added CSS animations to create an animation when the cupcake is clicked.",
+            "LINKS": [
+                {
+                    "HYPERLINK_TEXT": "Angular Materials",
+                    "HYPERLINK": "https://material.angular.io/"
+                }
+            ],
             "GITHUB_COMMIT": "04da5f7b792fd7b48427d749698e2215e32e918f"
         }
     ]
